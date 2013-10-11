@@ -7,6 +7,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Kunstmaan\MediaBundle\DependencyInjection\Compiler\MediaHandlerCompilerPass;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Kunstmaan\MediaBundle\DependencyInjection\Compiler\MenuCompilerPass;
 
 /**
  * KunstmaanMediaBundle
@@ -22,5 +23,6 @@ class KunstmaanMediaBundle extends Bundle
         parent::build($container);
 
         $container->addCompilerPass(new MediaHandlerCompilerPass());
+        $container->addCompilerPass(new MenuCompilerPass());
     }
 }

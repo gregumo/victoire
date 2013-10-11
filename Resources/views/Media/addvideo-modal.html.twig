@@ -1,6 +1,6 @@
 <div id="addvideo-modal" class="modal hide fade">
 
-    {% form_theme videoform 'KunstmaanAdminBundle:Form:fields.html.twig' %}
+    {% form_theme videoform 'KunstmaanMediaBundle:Form:fields.html.twig' %}
 
     <form action="{{ path('KunstmaanMediaBundle_media_modal_create', { 'folderId' : folder.id, 'type': 'video' }  ) }}" method="post" {{ form_enctype(videoform) }}>
         <div class="modal-header">

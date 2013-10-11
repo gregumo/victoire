@@ -1,5 +1,5 @@
 parameters:
-    
+
     kunstmaan_media.media_handler.remote_slide.class: 'Kunstmaan\MediaBundle\Helper\RemoteSlide\RemoteSlideHandler'
     kunstmaan_media.media_handler.remote_video.class: 'Kunstmaan\MediaBundle\Helper\RemoteVideo\RemoteVideoHandler'
     kunstmaan_media.media_handler.image.class: 'Kunstmaan\MediaBundle\Helper\Image\ImageHandler'
@@ -12,20 +12,20 @@ services:
         class: "%kunstmaan_media.media_handler.remote_slide.class%"
         tags:
             -  { name: 'kunstmaan_media.media_handler' }
-            
+
     kunstmaan_media.media_handlers.remote_video:
         class: "%kunstmaan_media.media_handler.remote_video.class%"
         tags:
             -  { name: 'kunstmaan_media.media_handler' }
-            
+
     kunstmaan_media.media_handlers.image:
         class: "%kunstmaan_media.media_handler.image.class%"
         arguments: ["%aviary_api_key%"]
         tags:
             -  { name: 'kunstmaan_media.media_handler' }
-            
+
     kunstmaan_media.media_handlers.file:
         class: "%kunstmaan_media.media_handler.file.class%"
         tags:
             -  { name: 'kunstmaan_media.media_handler' }
-    
+

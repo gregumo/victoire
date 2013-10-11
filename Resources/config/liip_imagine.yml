@@ -1,8 +1,10 @@
 liip_imagine:
     cache_prefix: uploads/cache
-    driver: imagick
-    data_loader: kunstmaan_media_thumbloader
+    driver: gd
+    data_loader: filesystem
     #cache: no_cache
+    data_root: %kernel.root_dir%/../web
+    formats : ['jpg', 'jpeg','png', 'gif', 'bmp']
     filter_sets:
         media_list_thumbnail:
             quality: 75
@@ -12,3 +14,19 @@ liip_imagine:
             quality: 75
             filters:
                 thumbnail: { size: [500, 500], mode: outbound }
+        optim:
+            quality: 85
+            format: jpg
+            filters:
+                strip: ~
+        optimjpg:
+            quality: 85
+            format: jpg
+            filters:
+                strip: ~
+        optimpng:
+            quality: 85
+            format: png
+            filters:
+                strip: ~
+

@@ -1,6 +1,6 @@
 <div id="addslide-modal" class="modal hide fade">
 
-    {% form_theme slideform 'KunstmaanAdminBundle:Form:fields.html.twig' %}
+    {% form_theme slideform 'KunstmaanMediaBundle:Form:fields.html.twig' %}
 
     <form action="{{ path('KunstmaanMediaBundle_media_modal_create', { 'folderId' : folder.id, 'type': 'slide' }  ) }}" method="post" {{ form_enctype(slideform) }}>
         <div class="modal-header">

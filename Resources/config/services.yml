@@ -4,6 +4,7 @@ parameters:
     kunstmaan_media.listener.doctrine.class: 'Kunstmaan\MediaBundle\EventListener\DoctrineMediaListener'
     kunstmaan_media.form.type.media.class: 'Kunstmaan\MediaBundle\Form\Type\MediaType'
     kunstmaan_media.media_creator_service.class: 'Kunstmaan\MediaBundle\Helper\Services\MediaCreatorService'
+    kunstmaan_media.menubuilder.class: 'Kunstmaan\MediaBundle\Helper\Menu\MenuBuilder'
 
 
 services:
@@ -22,7 +23,7 @@ services:
         class: "%kunstmaan_media.menu.adaptor.class%"
         arguments: ["@doctrine.orm.entity_manager"]
         tags:
-            -  { name: 'kunstmaan_admin.menu.adaptor' }
+            -  { name: 'kunstmaan_media.menu.adaptor' }
 
     kunstmaan_media.listener.doctrine:
         class: "%kunstmaan_media.listener.doctrine.class%"
@@ -46,3 +47,13 @@ services:
         class: "%kunstmaan_media.media_creator_service.class%"
         calls:
             - [ setEntityManager, [ "@doctrine.orm.entity_manager" ] ]
+
+    kunstmaan_media.menubuilder:
+        class: "%kunstmaan_media.menubuilder.class%"
+        arguments: ["@translator", "@service_container"]
+
+    kunstmaan_media.menu.twig.extension:
+        class: Kunstmaan\MediaBundle\Twig\MenuTwigExtension
+        arguments: ["@kunstmaan_media.menubuilder"]
+        tags:
+            -  { name: 'twig.extension' }
