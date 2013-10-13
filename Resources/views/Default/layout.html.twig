@@ -27,10 +27,8 @@
 
     <!--=========== CSS ===========-->
     <!--Combine-->
-    {% stylesheets
-        'bundles/kunstmaanmedia/css/style.css'
+    {% stylesheets injector="victoire-media"
         output='generated-css/style.css'
-        filter='cssrewrite'
     %}
     <link rel="stylesheet" href="{{ asset_url }}" />
     <!--Customizable color brand-->
@@ -57,7 +55,7 @@
 
     <!--=========== JS ===========-->
     <!--Combined-->
-    {% javascripts
+    {% javascripts injector=""
         '@KunstmaanMediaBundle/Resources/public/js/libs/modernizr.custom.2.6.2.js'
         '@KunstmaanMediaBundle/Resources/public/js/libs/jquery-1.9.0.min.js'
         output='generated-js/scripts.js'
@@ -154,7 +152,7 @@
     <script src="{{ asset('bundles/kunstmaanmedia/js/ckeditor/adapters/jquery.js') }}"></script>
 
     <!--Combined-->
-    {% javascripts
+    {% javascripts injector=""
         '@KunstmaanMediaBundle/Resources/public/js/libs/jquery-ui-1.10.0.custom.min.js'
         '@KunstmaanMediaBundle/Resources/public/js/libs/bootstrap.min.js'
         '@KunstmaanMediaBundle/Resources/public/js/libs/chosen.jquery.min.js'
