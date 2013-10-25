@@ -23,7 +23,10 @@
                 "@KunstmaanMediaBundle/Resources/public/js/script.js",
                 "bundles/kunstmaanmedia/js/libs/jquery.jstree.js"
             ],
-            "victoire-edit": "@KunstmaanMediaBundle/Resources/public/js/libs/modaldialog.min.js"
+            "victoire-edit":
+            [
+                "@KunstmaanMediaBundle/Resources/public/js/libs/modaldialog.min.js"
+            ]
 
          },
         "stylesheets":

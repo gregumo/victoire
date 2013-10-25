@@ -44,9 +44,8 @@ class MediaMenuListener
     {
         // $mediaItem = $this->getMediaItem();
 
-        $mediaItem = $this->menuBuilder->getMenu()->addChild('menu.media', array('uri' => '#media-modal'));
-        $mediaItem->setLinkAttribute('data-toggle', 'modal');
-        // $mediaItem->setLinkAttribute('src', '#media-modal');
+        $mediaItem = $this->menuBuilder->getMenu()->addChild('menu.media', array('uri' => '#'));
+        $mediaItem->setLinkAttribute('id', 'media-manager');
 
         return $mediaItem;
     }

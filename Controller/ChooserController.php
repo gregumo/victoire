@@ -20,7 +20,7 @@ class ChooserController extends Controller
 {
 
     /**
-     * @Route("/chooser", name="KunstmaanMediaBundle_chooser")
+     * @Route("/chooser", name="KunstmaanMediaBundle_chooser", options={"expose"=true})
      *
      * @return RedirectResponse
      */
