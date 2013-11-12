@@ -31,8 +31,14 @@
          },
         "stylesheets":
         {
-            "victoire-media": "bundles/kunstmaanmedia/css/style.css",
-            "victoire-edit": "bundles/kunstmaanmedia/css/media-style.less"
+            "victoire-media":
+            [
+                "bundles/kunstmaanmedia/css/style.css"
+            ],
+            "victoire-edit":
+            [
+                "bundles/kunstmaanmedia/css/media-style.less"
+            ]
         }
     }
 }
