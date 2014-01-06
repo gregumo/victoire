@@ -61,7 +61,7 @@ services:
     victoire_cms.media_menu_listener:
         class: Kunstmaan\MediaBundle\EventListener\MediaMenuListener
         arguments:
-            - "@victoire_cms.navbar_menu_builder"
+            - "@victoire_cms.admin_menu_builder"
             - "@event_dispatcher"
         tags:
             - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }

@@ -42,20 +42,22 @@ class MediaMenuListener
      */
     public function addGlobal(Event $event)
     {
-        // $mediaItem = $this->getMediaItem();
-
-        $mediaItem = $this->menuBuilder->getMenu()->addChild('menu.media', array('uri' => '#'));
+        $mediaItem = $this->getMainItem();
         $mediaItem->setLinkAttribute('id', 'media-manager');
 
         return $mediaItem;
     }
 
-    private function getMediaItem()
+    private function getMainItem()
     {
-        if ($menuMedia = $this->menuBuilder->getMenu()->getChild(('menu.media'))) {
+        if ($menuMedia = $this->menuBuilder->getTopNavbar()->getChild(('menu.media'))) {
             return $menuMedia;
         } else {
-            return $this->menuBuilder->createDropdownMenuItem($this->menuBuilder->getMenu(), "menu.media");
+            return $this->menuBuilder->createDropdownMenuItem(
+                $this->menuBuilder->getTopNavBar(),
+                "menu.media",
+                array("attributes" => array( "class" => "vic-pull-left vic-text-center"))
+            );
         }
     }
 }
