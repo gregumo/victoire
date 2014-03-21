@@ -14,19 +14,3 @@ liip_imagine:
             quality: 75
             filters:
                 thumbnail: { size: [500, 500], mode: outbound }
-        optim:
-            quality: 85
-            format: jpg
-            filters:
-                strip: ~
-        optimjpg:
-            quality: 85
-            format: jpg
-            filters:
-                strip: ~
-        optimpng:
-            quality: 85
-            format: png
-            filters:
-                strip: ~
-
