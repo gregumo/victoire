@@ -58,7 +58,7 @@
 
         <div class="tab-pane" id="properties">
 
-            {% form_theme editform 'KunstmaanAdminBundle:Form:fields.html.twig' %}
+            {% form_theme editform 'KunstmaanMediaBundle:Form:fields.html.twig' %}
 
             <form class="form-horizontal properties" action="{{ path('KunstmaanMediaBundle_media_show', { 'mediaId' : media.id } ) }}" method="post" {{ form_enctype(editform) }}>
                 <div class="prop_wrp">

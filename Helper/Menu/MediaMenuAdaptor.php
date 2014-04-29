@@ -4,10 +4,10 @@ namespace Kunstmaan\MediaBundle\Helper\Menu;
 
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\HttpFoundation\Request;
-use Kunstmaan\AdminBundle\Helper\Menu\MenuItem;
-use Kunstmaan\AdminBundle\Helper\Menu\MenuAdaptorInterface;
-use Kunstmaan\AdminBundle\Helper\Menu\MenuBuilder;
-use Kunstmaan\AdminBundle\Helper\Menu\TopMenuItem;
+use Kunstmaan\MediaBundle\Helper\Menu\MenuItem;
+use Kunstmaan\MediaBundle\Helper\Menu\MenuAdaptorInterface;
+use Kunstmaan\MediaBundle\Helper\Menu\MenuBuilder;
+use Kunstmaan\MediaBundle\Helper\Menu\TopMenuItem;
 use Kunstmaan\MediaBundle\Entity\Media;
 use Kunstmaan\MediaBundle\Entity\Folder;
 

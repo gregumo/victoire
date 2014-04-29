@@ -166,7 +166,7 @@
        </script>
        <div class="tab-pane" id="properties">
 
-           {% form_theme editform 'KunstmaanAdminBundle:Form:fields.html.twig' %}
+           {% form_theme editform 'KunstmaanMediaBundle:Form:fields.html.twig' %}
 
        		<form class="form-horizontal properties" action="{{ path('KunstmaanMediaBundle_folder_show', { 'folderId' : folder.id } ) }}" method="post" {{ form_enctype(editform) }}>
                 <div class="prop_wrp">

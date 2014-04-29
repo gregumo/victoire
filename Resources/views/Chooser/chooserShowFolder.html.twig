@@ -1,4 +1,4 @@
-{% extends 'KunstmaanAdminBundle:Default:layout.html.twig' %}
+{% extends 'KunstmaanMediaBundle:Default:layout.html.twig' %}
 
 {% block extrajavascript %}
     {{ parent() }}
@@ -74,18 +74,18 @@
         			</tbody>
                 </table>
             </section>
-        	<section>
-        		<ul class="thumbnails" id="file-list">
-        		    {% for media in folder.media %}
-        		        {% if not handler or handler.canHandle(media) %}
-            		        <li>
-            		            {% set handler = mediamanager.getHandler(media) %}
-                                {% set thumbnailurl =  handler.getImageUrl(media, app.request.basePath, 210, 150) %}
-            		            <a onclick="handleOK({imgpath: '{{ handler.getImageUrl(media, app.request.basePath, 210, 150) }}', path:'{{ media.url }}', title:'{{ media.name|escape('js') }}', id:'{{media.id}}'});return false;" class="thumbnail" href="#">
-            		                {% if thumbnailurl %}
-            		                    <img src="{{ handler.getImageUrl(media, app.request.basePath, 210, 150) }}" alt="{{ media.name }}" />
-            		                {% else %}
-                		                <div style="font-size: 135px;text-align:center">
+	<section>
+		<ul class="thumbnails" id="file-list">
+		    {% for media in folder.media %}
+		        {% if not handler or handler.canHandle(media) %}
+		        <li>
+		            {% set _handler = mediamanager.getHandler(media) %}
+                                {% set thumbnailurl =  _handler.getImageUrl(media, app.request.basePath, 210, 150) %}
+		            <a onclick="handleOK({imgpath: '{{ _handler.getImageUrl(media, app.request.basePath, 210, 150) }}', path:'{{ media.url }}', title:'{{ media.name|escape('js') }}', id:'{{media.id}}'});return false;" class="thumbnail" href="#">
+		                {% if thumbnailurl %}
+		                    <img src="{{ _handler.getImageUrl(media, app.request.basePath, 210, 150) }}" alt="{{ media.name }}" />
+		                {% else %}
+		                <div style="font-size: 135px;text-align:center">
                                             <i class="icon-file"></i>
                                         </div>
             		                {% endif %}

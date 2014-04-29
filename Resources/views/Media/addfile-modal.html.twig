@@ -1,6 +1,6 @@
 <div id="addfile-modal" class="modal hide fade">
 
-    {% form_theme fileform 'KunstmaanAdminBundle:Form:fields.html.twig' %}
+    {% form_theme fileform 'KunstmaanMediaBundle:Form:fields.html.twig' %}
 
     <form action="{{ path('KunstmaanMediaBundle_media_modal_create', { 'folderId' : folder.id, 'type': 'file' }  ) }}" method="post" {{ form_enctype(fileform) }}>
         <div class="modal-header">
