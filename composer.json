@@ -28,5 +28,10 @@
     "autoload": {
         "psr-0": { "Kunstmaan\\MediaBundle": "" }
     },
-    "target-dir": "Kunstmaan/MediaBundle"
+    "target-dir": "Kunstmaan/MediaBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
 }
