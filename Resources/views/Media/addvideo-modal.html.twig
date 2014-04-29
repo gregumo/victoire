@@ -1,6 +1,6 @@
 <div id="addvideo-modal" class="modal hide fade">
 
-    {% form_theme videoform 'KunstmaanAdminBundle:Form:fields.html.twig' %}
+    {% form_theme videoform 'KunstmaanMediaBundle:Form:fields.html.twig' %}
 
     <form action="{{ path('KunstmaanMediaBundle_media_modal_create', { 'folderId' : folder.id, 'type': 'video' }  ) }}" method="post" {{ form_enctype(videoform) }}>
         <div class="modal-header">
@@ -10,7 +10,7 @@
         <div class="modal-body--upload">{{ form_widget(videoform) }}</div>
         <div class="modal-footer">
             <div class="btn_group">
-                <button class="btn btn-primary" type="submit">{{ 'media.video.modal.save' | trans }}</button>
+                <button class="btn btn-primary" type="submit">{{ 'media.video.modal.save' | trans({}, null, 'media-bundle') }}</button>
                 <button class="btn" type="reset" data-dismiss="modal">{{ 'form.cancel' | trans }}</button>
             </div>
         </div>

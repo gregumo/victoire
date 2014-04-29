@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block content %}
-    {% form_theme form 'KunstmaanAdminBundle:Form:fields.html.twig' %}
+    {% form_theme form 'KunstmaanMediaBundle:Form:fields.html.twig' %}
 
     <form action="{{ path('KunstmaanMediaBundle_media_bulk_upload', { 'folderId' : folder.id } ) }}" method="post" {{ form_enctype(form) }} class="form-horizontal properties">
         <div class="prop_wrp">

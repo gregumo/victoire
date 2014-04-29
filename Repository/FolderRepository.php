@@ -34,6 +34,7 @@ class FolderRepository extends EntityRepository
         $folder->setDeleted(true);
         $em->persist($folder);
         $em->flush();
+
     }
 
     /**

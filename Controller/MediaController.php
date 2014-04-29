@@ -24,7 +24,7 @@ class MediaController extends Controller
     /**
      * @param int $mediaId
      *
-     * @Route("/{mediaId}", requirements={"mediaId" = "\d+"}, name="KunstmaanMediaBundle_media_show")
+     * @Route("/{mediaId}", requirements={"mediaId" = "\d+"}, name="KunstmaanMediaBundle_media_show", options={"expose"=true})
      *
      * @return Response
      */

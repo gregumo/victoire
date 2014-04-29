@@ -2,7 +2,6 @@
 
 namespace Kunstmaan\MediaBundle\Entity;
 
-use Kunstmaan\AdminBundle\Entity\AbstractEntity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -16,8 +15,14 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="kuma_folders")
  * @ORM\HasLifecycleCallbacks
  */
-class Folder extends AbstractEntity
+class Folder
 {
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="bigint")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
 
     /**
      * @var string
@@ -105,6 +110,26 @@ class Folder extends AbstractEntity
         $this->setCreatedAt(new \DateTime());
         $this->setUpdatedAt(new \DateTime());
         $this->deleted = false;
+    }
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set id
+     *
+     * @param int $id The unique identifier
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
     /**
