@@ -1,0 +1,3 @@
+[submodule "VictoireTestSuite"]
+	path = VictoireTestSuite
+	url = git@github.com:gregumo/VictoireTestSuite.git
